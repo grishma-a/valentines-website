@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import grishiTib from './lover.png'; // Adjust the path as necessary
+import alamo from './alamo.jpg'; // Adjust the path as necessary
+
+
 import './App.css';
 
 function App() {
@@ -32,9 +36,12 @@ function App() {
     "you think im an unlovable americain",
     "but i thought i was your baby ;(",
     "gonna crash out",
-    "I'm not giving up that easily!",
-    "Last chance to reconsider!",
-    "Okay fine, I'll ask one more time..."
+    "okay but what if i use timothy instead of tibby",
+    "will timothy be my valentine?",
+    "pretty please say yes",
+    "what if i give tibby a kiss",
+    "dont do this to me baby",
+    "just say yes ;("
   ];
 
   const handleYes = () => {
@@ -57,9 +64,9 @@ function App() {
   };
 
   return (
-    
+
     <div className="app">
-      
+
       {/* Background hearts */}
       {hearts.map(heart => (
         <div
@@ -89,7 +96,7 @@ function App() {
                 <div className="envelope-flap"></div>
                 <div className="envelope-body">
                   <h2>for tibster</h2>
-                  <div className="heart-seal">❤️</div>
+                  <div className="heart-seal"> 🤍 </div>
                 </div>
               </div>
             </div>
@@ -101,104 +108,74 @@ function App() {
                   {/* Replace with your actual image or keep placeholder */}
                   <div className="photo-placeholder">
                     <div className="photo-content">
-                      <span className="photo-text">Our Photo</span>
-                      <span className="photo-heart">💖</span>
+                      <img src={grishiTib} />
                     </div>
                   </div>
-                  <div className="photo-caption">My favorite person</div>
+                  <div className="photo-caption">grishi + tibby 4 ever</div>
                 </div>
               </div>
               <div className="card-right">
                 <div className="letter">
-                  <h3>My Dearest Tibby,</h3>
+                  <h3>to my dearest lover,</h3>
                   <p>
                     You're my best friend, my soul mate, my ride or die.
-                    Every day with you is an adventure, and every moment
-                    feels like home.
-                  </p>
-                  <p>
-                    I love how you make me laugh, how you understand me
-                    without words, and how you've become such an important
-                    part of my life. I want to experience everything with
-                    you by my side.
-                  </p>
-                  <p>
-                    Thank you for being you, and for choosing me every day.
+                    You save my life every time you call me and tell me you love me. I will save your life too one day. You're such an important part of my life. I want to experience everything with you by my side. Thank you for being you, and for choosing me every day.
                   </p>
                   <div className="letter-signature">
-                    <p>All my love,</p>
-                    <p>Your Future Wife</p>
-                    <p>Grishi</p>
+                    <p>with all my love,</p>
+                    <p>grishi</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {!cardOpen && (
-            <p className="open-hint">Click the card above to open it</p>
-          )}
+
         </div>
 
         {/* Valentine's Proposal (below the card) */}
         <div className="proposal-section">
           <div className="proposal-box">
-            <h2 className="proposal-title">
-              Now for the important question...
-            </h2>
-
-            <p className="proposal-message">
-              After reading that (hopefully sappy) letter...
-            </p>
-
+            <h2 className="proposal-title"> will you be my valentine? </h2>
             <div className="question-container">
-              <h3 className="question">Will you be my Valentine?</h3>
-
               {!answer ? (
                 <div className="choice-buttons">
-                  <button className="yes-btn" onClick={handleYes}>
-                    Yes
-                  </button>
-                  <button className="no-btn" onClick={handleNo}>
-                    No
-                  </button>
+                  <button className="yes-btn" onClick={handleYes}> Yes </button>
+                  <button className="no-btn" onClick={handleNo}> No </button>
                 </div>
               ) : answer === 'yes' ? (
                 <div className="response happy-response">
-                  <h3>YAY! You made my day! 💕</h3>
-                  <p>I'm so happy you said yes! Get ready for an amazing Valentine's Day!</p>
-                  <div className="celebration">
-                    <div className="confetti">🎉</div>
-                    <p>You're the best Valentine I could ask for!</p>
-                    <div className="confetti">🎊</div>
-                  </div>
+                  <h3>REALLLLY TIBBY LOVES GRISHI</h3>
+                  <p>yayyyy thank you for being my baby and happy 19 months together were gonna spend the rest of our lives together, youre stuck with me my king</p>
+                  <img src={alamo} />
+
                 </div>
               ) : (
                 <div className="response sad-response">
                   <h3> {insults[Math.min(insultCount - 1, insults.length - 1)]}</h3>
 
-                  {insultCount > 3 && (
+                  {insultCount >= 2 && (
                     <p className="insult-count">
-                      You've said no {insultCount} times now...
+                      youve said no {insultCount} times now {":("}
                     </p>
                   )}
 
                   <p className="try-again-text">
-                    Are you sure you don't want to be my Valentine?
+                    are you sure you don't want to be my valentine?
                   </p>
 
                   <div className="choice-buttons">
                     <button className="yes-btn" onClick={handleYes}>
-                      Okay, Yes!
+                      ofc yes
                     </button>
                     <button className="no-btn" onClick={handleNo}>
-                      Still No
+                      hell no
                     </button>
                   </div>
 
                   {insultCount > 5 && (
                     <p className="persistent-text">
-                      You're really making me work for this!
+                      crashout incoming
                     </p>
                   )}
                 </div>
@@ -212,7 +189,7 @@ function App() {
           <p className="signature">- grishi {"<3"}</p>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
