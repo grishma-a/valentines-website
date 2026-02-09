@@ -48,10 +48,10 @@ function App() {
 
   // Insult messages (escalating but playful)
   const insults = [
-    { text: "do you even love me? ", image: cry },
+    { text: "do you even love me? ", image: grishiScream },
     { text: "you must be some other bitch's valentine!", image: scream },
     { text: "damn you dont love me", image: grishiSad },
-    { text: "grishi sad", image: grishiScream },
+    { text: "grishi sad", image: cry },
     { text: "is it because you think im fat", image: grishiToof },
     { text: "you think im an unlovable americain", image: grishiCry },
     { text: "but i thought i was your baby ;(", image: grishiShock },
