@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/valentines-website/static/css/main.a1b604f3.css",
+    "main.js": "/valentines-website/static/js/main.44c37aab.js",
+    "static/js/453.e55f3c0d.chunk.js": "/valentines-website/static/js/453.e55f3c0d.chunk.js",
+    "static/media/cry.jpeg": "/valentines-website/static/media/cry.a9d0fffbe99225450e69.jpeg",
+    "static/media/lover.png": "/valentines-website/static/media/lover.48b2fd855f7e160eb8f5.png",
+    "static/media/grishiCry.png": "/valentines-website/static/media/grishiCry.6ee7da5a33cb38a73b03.png",
+    "static/media/grishiSad.png": "/valentines-website/static/media/grishiSad.6215fc49d5ff01391e1a.png",
+    "static/media/timDisaprove.png": "/valentines-website/static/media/timDisaprove.24dbee50239dc20388d1.png",
+    "static/media/frown.png": "/valentines-website/static/media/frown.f5ee38b4f957b073cb58.png",
+    "static/media/timmyCrashout.png": "/valentines-website/static/media/timmyCrashout.3b1fa550533cc29665e0.png",
+    "static/media/timBang.png": "/valentines-website/static/media/timBang.525976874ed5c2c26217.png",
+    "static/media/alamo.jpg": "/valentines-website/static/media/alamo.1bc4a45fd55b91c48c40.jpg",
+    "static/media/callcenter.png": "/valentines-website/static/media/callcenter.18f2729ebc6fa0138a41.png",
+    "static/media/brushTeef.jpg": "/valentines-website/static/media/brushTeef.f5efaa02d246fab45792.jpg",
+    "static/media/complexVar.jpg": "/valentines-website/static/media/complexVar.621da13feda0fc6f5a8f.jpg",
+    "static/media/grishiShock.jpg": "/valentines-website/static/media/grishiShock.7609d9618a9db7c303f7.jpg",
+    "static/media/grishiScream.jpg": "/valentines-website/static/media/grishiScream.cd115259cc4a357fb0cc.jpg",
+    "static/media/kissyLips.jpg": "/valentines-website/static/media/kissyLips.227b8daf081ed0e46fa0.jpg",
+    "static/media/grishiToof.jpg": "/valentines-website/static/media/grishiToof.442a94bbbd8b5e96a251.jpg",
+    "static/media/flipOff.jpg": "/valentines-website/static/media/flipOff.08de9d11eb546f1d5b22.jpg",
+    "static/media/grishiGums.jpg": "/valentines-website/static/media/grishiGums.7598b3f9e3fb7206d800.jpg",
+    "static/media/grishiFish.jpg": "/valentines-website/static/media/grishiFish.a2b503410817ab0269b9.jpg",
+    "static/media/constipated.jpg": "/valentines-website/static/media/constipated.853005d11ea9caae4888.jpg",
+    "static/media/scream.jpg": "/valentines-website/static/media/scream.97d6b6bc1ea1aeada5e3.jpg",
+    "index.html": "/valentines-website/index.html",
+    "main.a1b604f3.css.map": "/valentines-website/static/css/main.a1b604f3.css.map",
+    "main.44c37aab.js.map": "/valentines-website/static/js/main.44c37aab.js.map",
+    "453.e55f3c0d.chunk.js.map": "/valentines-website/static/js/453.e55f3c0d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1b604f3.css",
+    "static/js/main.44c37aab.js"
+  ]
+}
