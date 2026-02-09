@@ -1,9 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import grishiTib from './lover.png'; // Adjust the path as necessary
-import alamo from './alamo.jpg'; // Adjust the path as necessary
+import grishiTib from './img/lover.png';
+import alamo from './img/alamo.jpg';
+import brushTeef from './img/brushTeef.jpg';
+import callcenter from './img/callcenter.png';
+import complexVar from './img/complexVar.jpg';
+import constipated from './img/constipated.jpg';
+import cry from './img/cry.jpeg';
+import flipOff from './img/flipOff.jpg';
+import frown from './img/frown.png';
+import grishiCry from './img/grishiCry.png';
+import grishiFish from './img/grishiFish.jpg';
+import grishiGums from './img/grishiGums.jpg';
+import grishiSad from './img/grishiSad.png';
+import grishiScream from './img/grishiScream.jpg';
+import grishiShock from './img/grishiShock.jpg';
+import grishiToof from './img/grishiToof.jpg';
+import kissyLips from './img/kissyLips.jpg';
+import scream from './img/scream.jpg';
+import timBang from './img/timBang.png';
+import timDisaprove from './img/timDisaprove.png';
+import timmyCrashout from './img/timmyCrashout.png';
 
 
 import './App.css';
+import { keyboardImplementationWrapper } from '@testing-library/user-event/dist/keyboard';
 
 function App() {
   const [answer, setAnswer] = useState(null);
@@ -28,20 +48,25 @@ function App() {
 
   // Insult messages (escalating but playful)
   const insults = [
-    "do you even love me? ",
-    "you must be some other bitch's valentine!",
-    "damn you dont love me",
-    "grishi sad",
-    "is it because you think im fat",
-    "you think im an unlovable americain",
-    "but i thought i was your baby ;(",
-    "gonna crash out",
-    "okay but what if i use timothy instead of tibby",
-    "will timothy be my valentine?",
-    "pretty please say yes",
-    "what if i give tibby a kiss",
-    "dont do this to me baby",
-    "just say yes ;("
+    { text: "do you even love me? ", image: cry },
+    { text: "you must be some other bitch's valentine!", image: scream },
+    { text: "damn you dont love me", image: grishiSad },
+    { text: "grishi sad", image: grishiScream },
+    { text: "is it because you think im fat", image: grishiToof },
+    { text: "you think im an unlovable americain", image: grishiCry },
+    { text: "but i thought i was your baby ;(", image: grishiShock },
+    { text: "gonna crash out", image: flipOff },
+    { text: "okay but what if i use timothy instead of tibby", image: timmyCrashout },
+    { text: "will timothy be my valentine?", image: timBang },
+    { text: "pretty please say yes", image: grishiFish },
+    { text: "what if i give tibby a kiss", image: kissyLips },
+    { text: "dont do this to me baby", image: frown },
+    { text: "i thought you liked me", image: grishiGums },
+    { text: "be niiiice", image: constipated },
+    { text: "im at the no tibby factory", image: complexVar },
+    { text: "body milk but he wanted coke", image: callcenter },
+    { text: "im gonna force feed you tofu surprise", image: brushTeef },
+    { text: "just say yes ;(", image: timDisaprove }
   ];
 
   const handleYes = () => {
@@ -61,6 +86,12 @@ function App() {
 
   const resetChoice = () => {
     setAnswer(null);
+  };
+
+  // Get current insult based on count
+  const getCurrentInsult = () => {
+    const index = Math.min(insultCount - 1, insults.length - 1);
+    return insults[index] || insults[insults.length - 1];
   };
 
   return (
@@ -152,8 +183,15 @@ function App() {
                 </div>
               ) : (
                 <div className="response sad-response">
-                  <h3> {insults[Math.min(insultCount - 1, insults.length - 1)]}</h3>
+                  <h3> {getCurrentInsult().text}</h3>
 
+                  <div className="insult-image-container">
+                    <img
+                      src={getCurrentInsult().image}
+                      alt={getCurrentInsult().alt}
+                      className="insult-image"
+                    />
+                  </div>
                   {insultCount >= 2 && (
                     <p className="insult-count">
                       youve said no {insultCount} times now {":("}
