@@ -5,16 +5,33 @@ function App() {
   const [answer, setAnswer] = useState(null);
   const [cardOpen, setCardOpen] = useState(false);
   const [insultCount, setInsultCount] = useState(0);
+  const [hearts, setHearts] = useState([]);
+
+  // Create falling hearts
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const newHeart = {
+        id: Date.now(),
+        left: Math.random() * 100,
+        size: Math.random() * 20 + 10,
+        duration: Math.random() * 3 + 2
+      };
+      setHearts(prev => [...prev.slice(-20), newHeart]);
+    }, 300);
+
+    return () => clearInterval(interval);
+  }, []);
 
   // Insult messages (escalating but playful)
   const insults = [
-    "Are you sure about that?",
-    "Hmm, try again...",
-    "You're breaking my heart here!",
-    "Seriously? Look how cute this website is!",
-    "Okay, now you're just being difficult",
-    "I put so much work into this...",
-    "You know you want to say yes!",
+    "do you even love me? ",
+    "you must be some other bitch's valentine!",
+    "damn you dont love me",
+    "grishi sad",
+    "is it because you think im fat",
+    "you think im an unlovable americain",
+    "but i thought i was your baby ;(",
+    "gonna crash out",
     "I'm not giving up that easily!",
     "Last chance to reconsider!",
     "Okay fine, I'll ask one more time..."
@@ -40,9 +57,25 @@ function App() {
   };
 
   return (
+    
     <div className="app">
+      
+      {/* Background hearts */}
+      {hearts.map(heart => (
+        <div
+          key={heart.id}
+          className="heart-fall"
+          style={{
+            left: `${heart.left}%`,
+            fontSize: `${heart.size}px`,
+            animationDuration: `${heart.duration}s`
+          }}
+        >
+          ❤️
+        </div>
+      ))}
       <div className="container">
-        <h1 className="title">Happy Valentine's Day, Tibby</h1>
+        <h1 className="title">happy valentine's day, tibby!</h1>
 
         {/* Valentine's Card */}
         <div className="card-section">
@@ -55,9 +88,8 @@ function App() {
               <div className="card-front-content">
                 <div className="envelope-flap"></div>
                 <div className="envelope-body">
-                  <h2>For Tibby</h2>
+                  <h2>for tibster</h2>
                   <div className="heart-seal">❤️</div>
-                  <p className="instruction">Click to open</p>
                 </div>
               </div>
             </div>
@@ -143,7 +175,7 @@ function App() {
                 </div>
               ) : (
                 <div className="response sad-response">
-                  <h3>😢 {insults[Math.min(insultCount - 1, insults.length - 1)]}</h3>
+                  <h3> {insults[Math.min(insultCount - 1, insults.length - 1)]}</h3>
 
                   {insultCount > 3 && (
                     <p className="insult-count">
@@ -176,8 +208,8 @@ function App() {
         </div>
 
         <div className="footer">
-          <p>Made with love for Tibby</p>
-          <p className="signature">- Grishi</p>
+          <p>from your future wife</p>
+          <p className="signature">- grishi {"<3"}</p>
         </div>
       </div>
     </div>

@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+/* Falling hearts */
+.heart-fall {
+  position: fixed;
+  top: -50px;
+  color: #ff4081;
+  opacity: 0.7;
+  animation: fall linear forwards;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
 .app {
   min-height: 100vh;
   background: #fdf0f5;
@@ -127,11 +145,7 @@
   }
 }
 
-.instruction {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
+
 
 .open-hint {
   text-align: center;
