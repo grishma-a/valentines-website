@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import './App.css';
+import Album from './Album';
+
+
 import grishiTib from './img/lover.png';
 import alamo from './img/alamo.jpg';
 import brushTeef from './img/brushTeef.jpg';
@@ -20,12 +25,17 @@ import scream from './img/scream.jpg';
 import timBang from './img/timBang.png';
 import timDisaprove from './img/timDisaprove.png';
 import timmyCrashout from './img/timmyCrashout.png';
+import strandBang from './img/strandBangs.png';
+import autism from './img/autism.jpg';
+import youngBang from './img/youngBang.jpg';
+import herpes from './img/herpes.jpg';
+import mountain from './img/mountain.jpg';
+import sunscreen from './img/sunscreen.jpg';
 
 
-import './App.css';
 import { keyboardImplementationWrapper } from '@testing-library/user-event/dist/keyboard';
 
-function App() {
+function Home() {
   const [answer, setAnswer] = useState(null);
   const [cardOpen, setCardOpen] = useState(false);
   const [insultCount, setInsultCount] = useState(0);
@@ -48,6 +58,12 @@ function App() {
 
   // Insult messages (escalating but playful)
   const insults = [
+    { text: "timmy hates his white baby ;( ", image: sunscreen },
+    { text: "but im your yeti girlfriend! #yetilivesmatter ", image: mountain },
+    { text: "me watching you hit the hell no button ", image: herpes },
+    { text: "this is who youre hurting btw ", image: youngBang },
+    { text: "can i bribe you with the antennas ", image: strandBang },
+    { text: "but im so au(tim)sic for you ", image: autism },
     { text: "do you even love me? ", image: grishiScream },
     { text: "you must be some other bitch's valentine!", image: scream },
     { text: "damn you dont love me", image: grishiSad },
@@ -230,5 +246,45 @@ function App() {
     </div >
   );
 }
+
+function Navigation() {
+  const location = useLocation();
+
+  return (
+    <nav className="navigation">
+      <div className="nav-container">
+        <div className="nav-links">
+          <Link
+            to="/"
+            className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
+          >
+            Home
+          </Link>
+          <Link
+            to="/album"
+            className={`nav-link ${location.pathname === '/album' ? 'active' : ''}`}
+          >
+            Album
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/album" element={<Album />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
 
 export default App;

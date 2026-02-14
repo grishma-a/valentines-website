@@ -4,6 +4,60 @@
   box-sizing: border-box;
 }
 
+/* Navigation - subtle buttons in top right */
+.navigation {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-link {
+  color: #c2185b;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(194, 24, 91, 0.2);
+  transition: all 0.2s ease;
+  font-family: 'Georgia', serif;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-link:hover {
+  background: white;
+  border-color: #c2185b;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(194, 24, 91, 0.15);
+}
+
+.nav-link.active {
+  background: #c2185b;
+  color: white;
+  border-color: #c2185b;
+}
+
+/* Make space for fixed nav on mobile */
+@media (max-width: 768px) {
+  .navigation {
+    top: 10px;
+    right: 10px;
+  }
+
+  .nav-link {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
 /* Falling hearts */
 .heart-fall {
   position: fixed;
@@ -186,7 +240,7 @@
   border-radius: 8px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
   display: flex;
-  overflow: hidden;
+  overflow-y: auto;
   border: 2px solid #e91e63;
 }
 
@@ -456,7 +510,7 @@ img {
 @media (max-width: 768px) {
   .card {
     width: 90%;
-    height: 300px;
+    height: 640px;
   }
 
   .title {
