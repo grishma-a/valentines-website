@@ -31,8 +31,8 @@ function Album() {
 
     return (
         <div className="album-container">
-            <h1 className="album-title">Our Memories Together</h1>
-            <p className="album-subtitle">Every picture tells a story of us</p>
+            <h1 className="album-title">The Story of Timmy and Grishi</h1>
+            <p className="album-subtitle">19 months down, forever to go</p>
 
             <div className="photo-grid">
                 {photos.map((photo, index) => (
@@ -54,7 +54,7 @@ function Album() {
             </div>
 
             <div className="album-footer">
-                <p>More memories to come ❤️</p>
+                <p>to my favorite memories being the ones with you, and the ones we make ahead -grishi</p>
             </div>
         </div>
     );
