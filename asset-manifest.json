@@ -1,18 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.a1b604f3.css",
-    "main.js": "/static/js/main.c2271a90.js",
+    "main.css": "/static/css/main.06feeb6d.css",
+    "main.js": "/static/js/main.94d3a18a.js",
     "static/js/453.e55f3c0d.chunk.js": "/static/js/453.e55f3c0d.chunk.js",
+    "static/media/tongue.PNG": "/static/media/tongue.6c855b548d92242dead9.PNG",
     "static/media/cry.jpeg": "/static/media/cry.a9d0fffbe99225450e69.jpeg",
     "static/media/lover.png": "/static/media/lover.48b2fd855f7e160eb8f5.png",
     "static/media/grishiCry.png": "/static/media/grishiCry.6ee7da5a33cb38a73b03.png",
+    "static/media/strandBangs.png": "/static/media/strandBangs.0697b145d3bcef725e26.png",
     "static/media/grishiSad.png": "/static/media/grishiSad.6215fc49d5ff01391e1a.png",
     "static/media/timDisaprove.png": "/static/media/timDisaprove.24dbee50239dc20388d1.png",
     "static/media/frown.png": "/static/media/frown.f5ee38b4f957b073cb58.png",
     "static/media/timmyCrashout.png": "/static/media/timmyCrashout.3b1fa550533cc29665e0.png",
     "static/media/timBang.png": "/static/media/timBang.525976874ed5c2c26217.png",
+    "static/media/herpes.jpg": "/static/media/herpes.1ecc7687a029ea2676df.jpg",
+    "static/media/autism.jpg": "/static/media/autism.e0cd13b61e9bfabf7a5e.jpg",
     "static/media/alamo.jpg": "/static/media/alamo.1bc4a45fd55b91c48c40.jpg",
+    "static/media/sunscreen.jpg": "/static/media/sunscreen.fdd8f0dd526b45249a0d.jpg",
+    "static/media/youngBang.jpg": "/static/media/youngBang.8c0ddd563bd468806096.jpg",
     "static/media/callcenter.png": "/static/media/callcenter.18f2729ebc6fa0138a41.png",
+    "static/media/mountain.jpg": "/static/media/mountain.6ce55019cf9f8f0e67fe.jpg",
     "static/media/brushTeef.jpg": "/static/media/brushTeef.f5efaa02d246fab45792.jpg",
     "static/media/complexVar.jpg": "/static/media/complexVar.621da13feda0fc6f5a8f.jpg",
     "static/media/grishiShock.jpg": "/static/media/grishiShock.7609d9618a9db7c303f7.jpg",
@@ -25,12 +32,12 @@
     "static/media/constipated.jpg": "/static/media/constipated.853005d11ea9caae4888.jpg",
     "static/media/scream.jpg": "/static/media/scream.97d6b6bc1ea1aeada5e3.jpg",
     "index.html": "/index.html",
-    "main.a1b604f3.css.map": "/static/css/main.a1b604f3.css.map",
-    "main.c2271a90.js.map": "/static/js/main.c2271a90.js.map",
+    "main.06feeb6d.css.map": "/static/css/main.06feeb6d.css.map",
+    "main.94d3a18a.js.map": "/static/js/main.94d3a18a.js.map",
     "453.e55f3c0d.chunk.js.map": "/static/js/453.e55f3c0d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1b604f3.css",
-    "static/js/main.c2271a90.js"
+    "static/css/main.06feeb6d.css",
+    "static/js/main.94d3a18a.js"
   ]
 }
